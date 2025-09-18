@@ -13,7 +13,9 @@ const BookCard: FC<BookCardProps> = ({ book }) => {
       <h3>{book.title}</h3>
       <img src={book.imageUrl} alt={book.title} />
       <p><strong>Author:</strong> {book.author}</p>
-      <Link to={`/books/${book.id}`}>View Details</Link>
+      <Link to={`/books/${book.id}`} className="btn">
+        View Details
+      </Link>
     </div>
   );
 };

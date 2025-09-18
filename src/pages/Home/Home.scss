@@ -1,25 +1,33 @@
+@use "../../assets/styles/variables.scss" as variable;
+
+body {
+    background: variable.$bg-color;
+    font-family: variable.$font-family;
+}
 
 .home{
     padding: 20px;
     text-align: center;
-    background-color: #f5f5f5;
+    
 
     h1 {
-        color: #333;
+        color: variable.$text-color;
         margin-bottom: 20px;
     }
 
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: variable.$primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
 
-        &:hover {
-            background-color: #0056b3;
-        }
+    &:hover {
+        background-color: variable.$primary-color-hover;
     }
+  }
 }

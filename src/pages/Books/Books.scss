@@ -1,19 +1,20 @@
-
+@use "../../assets/styles/variables.scss" as variable;
 
 .books {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: variable.$bg-color;
+    min-height: 100vh;
 
     h2 {
         text-align: center;
-        color: #444;
+        color: variable.$text-color;
         margin-bottom: 20px;
     }
 
     .books-list {
         
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 1.5rem;
         justify-content: center;
     }

@@ -1,3 +1,4 @@
+@use "../../assets/styles/variables.scss" as variable;
 
 .book-card {
     border: 1px solid #ddd;
@@ -5,8 +6,8 @@
     padding: 15px;
     width: 200px;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: variable.$card-bg-color;
+    box-shadow: variable.$card-box-shadow;
     
     img {
         width: 100%;
@@ -18,17 +19,34 @@
     h3 {
         font-size: 1.2em;
         margin: 10px 0 5px;
-        color: #333;
+        color: variable.$text-color;
     }
 
     p {
         font-size: 0.9em;
-        color: #666;
+        color: variable.$secondary-text-color;
         margin: 5px 0;
     }
 
     .author {
         font-style: italic;
         color: #999;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: variable.$primary-color;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: variable.$primary-color-hover;
+        }
     }
 }

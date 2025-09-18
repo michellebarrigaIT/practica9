@@ -19,11 +19,15 @@ function BookDetail() {
 
   return (
     <div className="book-detail">
-      <h2>{book.title}</h2>
+    <h2>{book.title}</h2>
+    <div className="book-content">
       <img src={book.imageUrl} alt={book.title} />
-      <p><strong>Author:</strong> {book.author}</p>
-      <p>{book.description}</p>
+      <div className="book-info">
+        <p><strong>Author:</strong> {book.author}</p>
+        <p>{book.description}</p>
+      </div>
     </div>
+  </div>
   );
 }
 
