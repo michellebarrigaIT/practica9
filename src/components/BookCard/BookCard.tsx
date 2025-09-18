@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import type { Book } from "../types/Book";
+import type { Book } from "../../types/Book";
 import { Link } from "react-router-dom";
-
+import "./BookCard.scss"
 
 type BookCardProps = {
     book: Book;

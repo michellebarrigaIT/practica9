@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="home">
       <h1>Welcome to the Book Management App </h1>
-      <Link to="/books">Go to Books</Link>
+      <button><Link to="/books">Go to Books</Link></button>
     </div>
   )
 }

@@ -1,5 +1,6 @@
-import BookCard from "../../components/BookCard"
+import BookCard from "../../components/BookCard/BookCard"
 import { books } from "../../data/books"
+import "./Books.scss"
 
 function Books() {
   return (

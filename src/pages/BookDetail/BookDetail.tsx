@@ -1,22 +1,24 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./BookDetail.scss";
 import { books } from "../../data/books";
 
 function BookDetail() {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
 
   const book = books.find((b) => b.id === id);
 
   if (!book) {
-    navigate("/not-found", { replace: true });
-    return null;
+     return (
+        <div className="book-detail">
+          <h2>Book Not Found</h2>
+        </div>
+  );
   }
 
   return (
     <div className="book-detail">
-      <img src={book.imageUrl} alt={book.title} />
       <h2>{book.title}</h2>
+      <img src={book.imageUrl} alt={book.title} />
       <p><strong>Author:</strong> {book.author}</p>
       <p>{book.description}</p>
     </div>
