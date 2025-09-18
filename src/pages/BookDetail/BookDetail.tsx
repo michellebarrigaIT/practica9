@@ -1,19 +1,21 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./BookDetail.scss";
 import { books } from "../../data/books";
+import { useEffect } from "react";
 
 function BookDetail() {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
 
   const book = books.find((b) => b.id === id);
 
-  if (!book) {
-     return (
-        <div className="book-detail">
-          <h2>Book Not Found</h2>
-        </div>
-  );
-  }
+  useEffect(() => {
+    if (!book) {
+      navigate("/not-found", { replace: true });
+    }
+  }, [book, navigate]);
+
+  if (!book) return null;
 
   return (
     <div className="book-detail">
