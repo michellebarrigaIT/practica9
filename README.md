@@ -3,6 +3,8 @@
 ```js
 src/
 │
+├── data/
+│ └─ books.tsx
 ├── components/
 │ └─ BookCard.tsx
 ├── pages/
@@ -18,6 +20,8 @@ src/
 │ └─ NotFound
 │     └─ NotFound.tsx
 │     └─ NotFound.scss
+├── types/
+│ └─ Book.tsx
 └── App.tsx
 └── main.tsx
 ```
