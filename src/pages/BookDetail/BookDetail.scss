@@ -1,42 +1,59 @@
 @use "../../assets/styles/variables.scss" as variable;
 
 .book-detail {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: variable.$card-bg-color;
-  box-shadow: variable.$card-box-shadow;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: variable.$card-bg-color;
+    box-shadow: variable.$card-box-shadow;
 
-  h2 {
-    text-align: center;
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: variable.$text-color;
-  }
-
-  .book-content {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-  }
-
-  img {
-    width: 40%;
-    height: auto;
-    border-radius: 4px;
-  }
-
-  .book-info {
-    flex: 1;
-    text-align: left;
-
-    p {
-      font-size: 1em;
-      line-height: 1.6;
-      color: #444;
-      margin-bottom: 10px;
+    h2 {
+        text-align: center;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        color: variable.$text-color;
     }
-  }
+
+    .book-content {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    img {
+        width: 40%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    .book-info {
+        flex: 1;
+        text-align: left;
+
+        p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #444;
+        margin-bottom: 10px;
+        }
+    }
+
+    .back-button {
+        margin-top: 15px;
+        padding: 8px 14px;
+        background-color: variable.$primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.95em;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken(variable.$primary-color, 10%);
+        }
+    }
+
 }

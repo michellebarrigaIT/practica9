@@ -25,6 +25,9 @@ function BookDetail() {
       <div className="book-info">
         <p><strong>Author:</strong> {book.author}</p>
         <p>{book.description}</p>
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
       </div>
     </div>
   </div>

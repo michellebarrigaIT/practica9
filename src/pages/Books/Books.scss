@@ -19,4 +19,20 @@
         justify-content: center;
     }
 
+    .back-button {
+        margin-top: 15px;
+        padding: 8px 14px;
+        background-color: variable.$primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.95em;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken(variable.$primary-color, 10%);
+        }
+    }
+
 }
