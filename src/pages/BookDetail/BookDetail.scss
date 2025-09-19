@@ -52,7 +52,7 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: darken(variable.$primary-color, 10%);
+            background-color: variable.$primary-color-hover;
         }
     }
 
