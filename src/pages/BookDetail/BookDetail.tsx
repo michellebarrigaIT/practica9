@@ -23,8 +23,11 @@ function BookDetail() {
       <div className="book-content">
         <img src={book.imageUrl} alt={book.title} />
         <div className="book-info">
-          <p><strong>Author:</strong> {book.author}</p>
-          <p>{book.description}</p>
+          <p><strong>Author: </strong> {book.author}</p>
+          <p><strong>Descriprion: </strong>{book.description}</p>
+          <p><strong>Publisher: </strong>{book.publisher}</p>
+          <p><strong>Year of publication: </strong>{book.year}</p>
+          <p><strong>Pages: </strong>{book.pages}</p>
           <button className="back-button" onClick={() => navigate(-1)}>
             ← Back
           </button>
