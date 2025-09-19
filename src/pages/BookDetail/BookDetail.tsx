@@ -7,7 +7,7 @@ function BookDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  const book = books.find((b) => b.id === id);
+  const book = books.find((book) => book.id === id);
 
   useEffect(() => {
     if (!book) {
@@ -19,18 +19,18 @@ function BookDetail() {
 
   return (
     <div className="book-detail">
-    <h2>{book.title}</h2>
-    <div className="book-content">
-      <img src={book.imageUrl} alt={book.title} />
-      <div className="book-info">
-        <p><strong>Author:</strong> {book.author}</p>
-        <p>{book.description}</p>
-        <button className="back-button" onClick={() => navigate(-1)}>
-          ← Back
-        </button>
+      <h2>{book.title}</h2>
+      <div className="book-content">
+        <img src={book.imageUrl} alt={book.title} />
+        <div className="book-info">
+          <p><strong>Author:</strong> {book.author}</p>
+          <p>{book.description}</p>
+          <button className="back-button" onClick={() => navigate(-1)}>
+            ← Back
+          </button>
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 
